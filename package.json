@@ -1,16 +1,22 @@
 {
-  "name": "nayna",
+  "name": "noxhsxrk.github.io",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js",
+    "start": "next start",
+    "export": "npm run build && next export && touch out/.nojekyll",
+    "serve": "npm run export && serve out",
+    "deploy": "npm run export && node gh-pages.js",
     "lint": "next lint"
   },
   "dependencies": {
+    "gh-pages": "^3.2.3",
+    "moment": "^2.29.1",
     "next": "12.0.10",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "serve": "^13.0.2"
   },
   "devDependencies": {
     "eslint": "8.8.0",
